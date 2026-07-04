@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PKD Variants — NephVar2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:wght@300;400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--serif:'Instrument Serif',Georgia,serif;--sans:'Syne',system-ui,sans-serif;
+--mono:'DM Mono',ui-monospace,monospace;--accent:#1f6fa8;--ink:#16202b;
+--soft:#5d6b78;--faint:#8a96a3;--line:#e6e9ee;--bg:#fbfaf7;
+--P:#c0392b;--LP:#e07b18;--VUS:#7f7f7f;--LB:#7fb3d5;--B:#1f6fa8}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:40px 22px 70px}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+.crumb a{color:var(--accent);text-decoration:none}.crumb a:hover{text-decoration:underline}
+h1{font-family:var(--serif);font-weight:400;font-size:40px;margin:0 0 4px}
+h1 em{font-style:italic;color:var(--accent)}
+.sub{color:var(--soft);font-size:14px;max-width:680px;line-height:1.6;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);
+border-radius:6px;padding:22px;transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(20,30,45,.10);border-color:#cdd9e4}
+.card-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+.gname{font-family:var(--serif);font-size:28px}
+.gtotal{font-family:var(--mono);font-size:11px;color:var(--faint)}
+.acmgrow{display:flex;gap:5px;margin-bottom:14px}
+.acmgbox{flex:1;border-radius:4px;color:#fff;padding:6px 4px;text-align:center}
+.acmgcount{display:block;font-family:var(--mono);font-size:14px;font-weight:400}
+.acmglabel{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.06em;opacity:.9}
+.cta{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;font-family:var(--mono);font-size:10.5px;color:var(--soft)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:9px;height:9px;border-radius:99px;display:inline-block}
+</style></head>
+<body><div class="wrap">
+<div class="crumb"><a href="../../">NephVar2</a> / <a href="../">PKD</a> / Variants</div>
+<h1>PKD <em>Variants</em></h1>
+<div class="sub">ClinVar-derived variant database for the polycystic kidney disease
+gene group (PKD1, PKD2, PKHD1, DZIP1L) &mdash; 15,146 unique variants total. Select a gene to
+browse its full variant list with classification history and submission timelines.</div>
+<div class="grid">
+    <a class="card" href="DZIP1L.html">
+      <div class="card-head">
+        <span class="gname">DZIP1L</span>
+        <span class="gtotal">327 variants</span>
+      </div>
+      <div class="acmgrow"><div class="acmgbox" style="background:var(--P)"><span class="acmgcount">29</span><span class="acmglabel">P</span></div><div class="acmgbox" style="background:var(--LP)"><span class="acmgcount">8</span><span class="acmglabel">LP</span></div><div class="acmgbox" style="background:var(--VUS)"><span class="acmgcount">161</span><span class="acmglabel">VUS</span></div><div class="acmgbox" style="background:var(--LB)"><span class="acmgcount">87</span><span class="acmglabel">LB</span></div><div class="acmgbox" style="background:var(--B)"><span class="acmgcount">42</span><span class="acmglabel">B</span></div><div class="acmgbox" style="background:var(--faint)"><span class="acmgcount">0</span><span class="acmglabel">Other</span></div></div>
+      <div class="cta">View variants &rarr;</div>
+    </a>
+    <a class="card" href="PKD1.html">
+      <div class="card-head">
+        <span class="gname">PKD1</span>
+        <span class="gtotal">6,839 variants</span>
+      </div>
+      <div class="acmgrow"><div class="acmgbox" style="background:var(--P)"><span class="acmgcount">1795</span><span class="acmglabel">P</span></div><div class="acmgbox" style="background:var(--LP)"><span class="acmgcount">524</span><span class="acmglabel">LP</span></div><div class="acmgbox" style="background:var(--VUS)"><span class="acmgcount">3387</span><span class="acmglabel">VUS</span></div><div class="acmgbox" style="background:var(--LB)"><span class="acmgcount">806</span><span class="acmglabel">LB</span></div><div class="acmgbox" style="background:var(--B)"><span class="acmgcount">327</span><span class="acmglabel">B</span></div><div class="acmgbox" style="background:var(--faint)"><span class="acmgcount">0</span><span class="acmglabel">Other</span></div></div>
+      <div class="cta">View variants &rarr;</div>
+    </a>
+    <a class="card" href="PKD2.html">
+      <div class="card-head">
+        <span class="gname">PKD2</span>
+        <span class="gtotal">1,520 variants</span>
+      </div>
+      <div class="acmgrow"><div class="acmgbox" style="background:var(--P)"><span class="acmgcount">382</span><span class="acmglabel">P</span></div><div class="acmgbox" style="background:var(--LP)"><span class="acmgcount">90</span><span class="acmglabel">LP</span></div><div class="acmgbox" style="background:var(--VUS)"><span class="acmgcount">715</span><span class="acmglabel">VUS</span></div><div class="acmgbox" style="background:var(--LB)"><span class="acmgcount">267</span><span class="acmglabel">LB</span></div><div class="acmgbox" style="background:var(--B)"><span class="acmgcount">66</span><span class="acmglabel">B</span></div><div class="acmgbox" style="background:var(--faint)"><span class="acmgcount">0</span><span class="acmglabel">Other</span></div></div>
+      <div class="cta">View variants &rarr;</div>
+    </a>
+    <a class="card" href="PKHD1.html">
+      <div class="card-head">
+        <span class="gname">PKHD1</span>
+        <span class="gtotal">6,460 variants</span>
+      </div>
+      <div class="acmgrow"><div class="acmgbox" style="background:var(--P)"><span class="acmgcount">691</span><span class="acmglabel">P</span></div><div class="acmgbox" style="background:var(--LP)"><span class="acmgcount">943</span><span class="acmglabel">LP</span></div><div class="acmgbox" style="background:var(--VUS)"><span class="acmgcount">2145</span><span class="acmglabel">VUS</span></div><div class="acmgbox" style="background:var(--LB)"><span class="acmgcount">2410</span><span class="acmglabel">LB</span></div><div class="acmgbox" style="background:var(--B)"><span class="acmgcount">271</span><span class="acmglabel">B</span></div><div class="acmgbox" style="background:var(--faint)"><span class="acmgcount">0</span><span class="acmglabel">Other</span></div></div>
+      <div class="cta">View variants &rarr;</div>
+    </a></div>
+<div class="legend">
+  <span><span class="dot" style="background:var(--P)"></span>Pathogenic (P)</span>
+  <span><span class="dot" style="background:var(--LP)"></span>Likely pathogenic (LP)</span>
+  <span><span class="dot" style="background:var(--VUS)"></span>Uncertain significance (VUS)</span>
+  <span><span class="dot" style="background:var(--LB)"></span>Likely benign (LB)</span>
+  <span><span class="dot" style="background:var(--B)"></span>Benign (B)</span>
+  <span><span class="dot" style="background:var(--faint)"></span>Other / conflicting</span>
+</div>
+</div></body></html>
