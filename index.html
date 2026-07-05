@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NephVar2 — Cystic Kidney &amp; Liver Disease ClinVar Database</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:wght@300;400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--serif:'Instrument Serif',Georgia,serif;--sans:'Syne',system-ui,sans-serif;
+--mono:'DM Mono',ui-monospace,monospace;--accent:#1f6fa8;--ink:#16202b;
+--soft:#5d6b78;--faint:#8a96a3;--line:#e6e9ee;--bg:#fbfaf7;
+--P:#c0392b;--LP:#e07b18;--VUS:#7f7f7f;--LB:#7fb3d5;--B:#1f6fa8}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:56px 22px 80px}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
+h1{font-family:var(--serif);font-weight:400;font-size:52px;margin:0 0 6px}
+h1 em{font-style:italic;color:var(--accent)}
+.sub{color:var(--soft);font-size:15px;max-width:720px;line-height:1.65;margin-bottom:12px}
+.stats{display:flex;gap:28px;margin:24px 0 44px;font-family:var(--mono);font-size:12px;color:var(--soft)}
+.stats b{display:block;font-family:var(--serif);font-size:26px;color:var(--ink);font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);
+border-radius:8px;padding:26px;transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(20,30,45,.12);border-color:#cdd9e4}
+.card-head{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.gname{font-family:var(--serif);font-size:26px;line-height:1.2}
+.gtotal{font-family:var(--mono);font-size:11px;color:var(--faint)}
+.card-desc{color:var(--soft);font-size:13px;margin-bottom:16px;line-height:1.5}
+.cta{font-family:var(--mono);font-size:12px;color:var(--accent)}
+footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:var(--faint);border-top:1px solid var(--line);padding-top:20px}
+footer a{color:var(--accent);text-decoration:none}
+</style></head>
+<body><div class="wrap">
+<div class="crumb">NephVar2</div>
+<h1>NephVar2 <em>Cystic</em></h1>
+<div class="sub">ClinVar-derived variant database for cystic kidney and liver disease genes,
+organized into four clinically and mechanistically grouped panels. Select a group to browse
+its genes, or drill into any gene for full classification history and submission timelines.</div>
+<div class="stats">
+  <div><b>40</b>genes</div>
+  <div><b>70,130</b>unique variants</div>
+  <div><b>4</b>disease groups</div>
+</div>
+<div class="grid">
+    <a class="card" href="PKD/variants/">
+      <div class="card-head">
+        <span class="gname">Polycystic Kidney Disease</span>
+        <span class="gtotal">15,146 variants</span>
+      </div>
+      <div class="card-desc">ADPKD/ARPKD core genes &middot; 4 genes</div>
+      <div class="cta">Browse group &rarr;</div>
+    </a>
+    <a class="card" href="PLD/variants/">
+      <div class="card-head">
+        <span class="gname">Polycystic Liver Disease</span>
+        <span class="gtotal">3,080 variants</span>
+      </div>
+      <div class="card-desc">ADPLD / secretory pathway genes &middot; 7 genes</div>
+      <div class="cta">Browse group &rarr;</div>
+    </a>
+    <a class="card" href="Ciliopathies/variants/">
+      <div class="card-head">
+        <span class="gname">Ciliopathies</span>
+        <span class="gtotal">15,782 variants</span>
+      </div>
+      <div class="card-desc">Joubert/Meckel-spectrum & related ciliary genes &middot; 18 genes</div>
+      <div class="cta">Browse group &rarr;</div>
+    </a>
+    <a class="card" href="Tubulointerstitial/variants/">
+      <div class="card-head">
+        <span class="gname">Tubulointerstitial Diseases</span>
+        <span class="gtotal">36,122 variants</span>
+      </div>
+      <div class="card-desc">Syndromic / tumor-suppressor / AR-metabolic genes &middot; 11 genes</div>
+      <div class="cta">Browse group &rarr;</div>
+    </a></div>
+<footer>Companion resource to <a href="https://nephvar.github.io/NephVar/">NephVar</a> (CGN, CAKUT, SRNS, USD, NPHP) &middot; data sourced from ClinVar via <a href="https://github.com/Joshua-Pillai/NephVar_Cystic">NephVar_Cystic</a></footer>
+</div></body></html>
