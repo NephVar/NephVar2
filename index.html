@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NephVar2 — Cystic Kidney &amp; Liver Disease ClinVar Database</title>
+<title>NephVar2 — Cystic Kidney &amp; Liver Disease Database</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Mono:wght@300;400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -12,68 +12,94 @@
 --P:#c0392b;--LP:#e07b18;--VUS:#7f7f7f;--LB:#7fb3d5;--B:#1f6fa8}
 *{box-sizing:border-box}
 body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
-.wrap{max-width:1240px;margin:0 auto;padding:56px 22px 80px}
-.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:16px}
-h1{font-family:var(--serif);font-weight:400;font-size:52px;margin:0 0 6px}
-h1 em{font-style:italic;color:var(--accent)}
-.sub{color:var(--soft);font-size:15px;max-width:720px;line-height:1.65;margin-bottom:12px}
-.stats{display:flex;gap:28px;margin:24px 0 44px;font-family:var(--mono);font-size:12px;color:var(--soft)}
-.stats b{display:block;font-family:var(--serif);font-size:26px;color:var(--ink);font-weight:400}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-.card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);
-border-radius:8px;padding:26px;transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
-.card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(20,30,45,.12);border-color:#cdd9e4}
-.card-head{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
-.gname{font-family:var(--serif);font-size:26px;line-height:1.2}
-.gtotal{font-family:var(--mono);font-size:11px;color:var(--faint)}
-.card-desc{color:var(--soft);font-size:13px;margin-bottom:16px;line-height:1.5}
-.cta{font-family:var(--mono);font-size:12px;color:var(--accent)}
-footer{margin-top:56px;font-family:var(--mono);font-size:11px;color:var(--faint);border-top:1px solid var(--line);padding-top:20px}
+.wrap{max-width:1240px;margin:0 auto;padding:56px 22px 60px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--soft);margin-bottom:18px}
+h1{font-family:var(--serif);font-weight:400;font-size:56px;margin:0 0 18px;line-height:1.05}
+.sub{color:var(--soft);font-size:16px;max-width:760px;line-height:1.65;margin-bottom:48px}
+.section-label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+color:var(--faint);margin:48px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.group-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:#fff;
+border:1px solid var(--line);border-radius:8px;padding:24px;transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
+.group-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(20,30,45,.12);border-color:#cdd9e4}
+.group-num{font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:8px}
+.group-top{display:flex;justify-content:flex-end;margin-top:-30px;margin-bottom:6px}
+.badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
+background:#e8f3ea;color:#2f8a4e;padding:3px 9px;border-radius:99px}
+.group-short{font-family:var(--serif);font-size:30px;line-height:1.15;margin-bottom:2px}
+.group-full{color:var(--soft);font-size:13.5px;margin-bottom:12px;line-height:1.4}
+.group-meta{font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:18px}
+.chip{font-family:var(--mono);font-size:10px;background:#f4f3ef;color:var(--soft);padding:3px 8px;border-radius:4px}
+.chip.more{background:#eef2f5;color:var(--accent)}
+.cta{font-family:var(--mono);font-size:12px;color:var(--accent);margin-top:auto}
+footer{margin-top:56px;font-family:var(--mono);font-size:10.5px;color:var(--faint);
+border-top:1px solid var(--line);padding-top:24px;line-height:1.7}
 footer a{color:var(--accent);text-decoration:none}
+footer p{max-width:900px;margin:10px 0 0}
 </style></head>
 <body><div class="wrap">
-<div class="crumb">NephVar2</div>
-<h1>NephVar2 <em>Cystic</em></h1>
-<div class="sub">ClinVar-derived variant database for cystic kidney and liver disease genes,
-organized into four clinically and mechanistically grouped panels. Select a group to browse
-its genes, or drill into any gene for full classification history and submission timelines.</div>
-<div class="stats">
-  <div><b>40</b>genes</div>
-  <div><b>70,130</b>unique variants</div>
-  <div><b>4</b>disease groups</div>
-</div>
-<div class="grid">
-    <a class="card" href="PKD/variants/">
-      <div class="card-head">
-        <span class="gname">Polycystic Kidney Disease</span>
-        <span class="gtotal">15,146 variants</span>
+<div class="eyebrow">Building the future of precision nephrology, today.</div>
+<h1>NephVar2</h1>
+<div class="sub">The NephVar2 database aims to be a molecular dictionary for nephrologists in
+defining the genetic architecture of cystic kidney disease, polycystic liver disease, and
+related ciliopathies and tubulointerstitial disorders.</div>
+
+<div class="section-label">Disease Groups</div>
+<div class="groups">
+    <a class="group-card" href="PKD/variants/">
+      <div class="group-num">01 &mdash;</div>
+      <div class="group-top">
+        <span class="badge">Live</span>
       </div>
-      <div class="card-desc">ADPKD/ARPKD core genes &middot; 4 genes</div>
-      <div class="cta">Browse group &rarr;</div>
+      <div class="group-short">PKD</div>
+      <div class="group-full">Polycystic Kidney Disease</div>
+      <div class="group-meta">4 genes &middot; 15,146 variants</div>
+      <div class="chips"><span class="chip">PKD1</span><span class="chip">PKD2</span><span class="chip">PKHD1</span><span class="chip">DZIP1L</span></div>
+      <div class="cta">Open database &rarr;</div>
     </a>
-    <a class="card" href="PLD/variants/">
-      <div class="card-head">
-        <span class="gname">Polycystic Liver Disease</span>
-        <span class="gtotal">3,080 variants</span>
+    <a class="group-card" href="PLD/variants/">
+      <div class="group-num">02 &mdash;</div>
+      <div class="group-top">
+        <span class="badge">Live</span>
       </div>
-      <div class="card-desc">ADPLD / secretory pathway genes &middot; 7 genes</div>
-      <div class="cta">Browse group &rarr;</div>
+      <div class="group-short">PLD</div>
+      <div class="group-full">Polycystic Liver Disease</div>
+      <div class="group-meta">7 genes &middot; 3,080 variants</div>
+      <div class="chips"><span class="chip">PRKCSH</span><span class="chip">SEC63</span><span class="chip">GANAB</span><span class="chip">ALG8</span><span class="chip">ALG9</span><span class="chip">SEC61A1</span><span class="chip">DNAJB11</span></div>
+      <div class="cta">Open database &rarr;</div>
     </a>
-    <a class="card" href="Ciliopathies/variants/">
-      <div class="card-head">
-        <span class="gname">Ciliopathies</span>
-        <span class="gtotal">15,782 variants</span>
+    <a class="group-card" href="Ciliopathies/variants/">
+      <div class="group-num">03 &mdash;</div>
+      <div class="group-top">
+        <span class="badge">Live</span>
       </div>
-      <div class="card-desc">Joubert/Meckel-spectrum & related ciliary genes &middot; 18 genes</div>
-      <div class="cta">Browse group &rarr;</div>
+      <div class="group-short">Ciliopathies</div>
+      <div class="group-full">Joubert/Meckel-Spectrum Ciliopathies</div>
+      <div class="group-meta">18 genes &middot; 15,782 variants</div>
+      <div class="chips"><span class="chip">AHI1</span><span class="chip">CC2D2A</span><span class="chip">CEP83</span><span class="chip">CEP89</span><span class="chip">CEP120</span><span class="chip">CSPP1</span><span class="chip">IFT172</span><span class="chip">MKS1</span><span class="chip">OFD1</span><span class="chip">TMEM138</span><span class="chip more">+8 more</span></div>
+      <div class="cta">Open database &rarr;</div>
     </a>
-    <a class="card" href="Tubulointerstitial/variants/">
-      <div class="card-head">
-        <span class="gname">Tubulointerstitial Diseases</span>
-        <span class="gtotal">36,122 variants</span>
+    <a class="group-card" href="Tubulointerstitial/variants/">
+      <div class="group-num">04 &mdash;</div>
+      <div class="group-top">
+        <span class="badge">Live</span>
       </div>
-      <div class="card-desc">Syndromic / tumor-suppressor / AR-metabolic genes &middot; 11 genes</div>
-      <div class="cta">Browse group &rarr;</div>
+      <div class="group-short">Tubulointerstitial</div>
+      <div class="group-full">Tubulointerstitial & Syndromic Kidney Disease</div>
+      <div class="group-meta">11 genes &middot; 36,122 variants</div>
+      <div class="chips"><span class="chip">COL4A1</span><span class="chip">DICER1</span><span class="chip">GLIS3</span><span class="chip">JAG1</span><span class="chip">LRP5</span><span class="chip">NOTCH2</span><span class="chip">PMM2</span><span class="chip">RMND1</span><span class="chip">TSC1</span><span class="chip">TSC2</span><span class="chip more">+1 more</span></div>
+      <div class="cta">Open database &rarr;</div>
     </a></div>
-<footer>Companion resource to <a href="https://nephvar.github.io/NephVar/">NephVar</a> (CGN, CAKUT, SRNS, USD, NPHP) &middot; data sourced from ClinVar via <a href="https://github.com/Joshua-Pillai/NephVar_Cystic">NephVar_Cystic</a></footer>
+
+<footer>
+&copy; NephVar2. Licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>.
+<p>Disclaimer: The NephVar2 Database and other information provided on or linked to this site is for theoretical
+prediction only; caution should be exercised in use. It is provided &ldquo;as-is&rdquo; without any warranty of any
+kind, whether express or implied. For clarity, no warranty is given that use of the information shall not infringe
+the rights of any third party. The information provided is not intended to be a substitute for professional medical
+advice, diagnosis, or treatment, and does not constitute medical or other professional advice. Data contained within
+the NephVar2 Database is provided for non-commercial research use only under
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.</p>
+</footer>
 </div></body></html>
